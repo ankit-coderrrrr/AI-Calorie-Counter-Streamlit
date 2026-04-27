@@ -10,9 +10,8 @@ from datetime import date
 # --- 1. CONFIGURATION & AI SETUP ---
 st.set_page_config(page_title="AI Calorie Tracker", layout="centered", page_icon='🍎')
 
-# REPLACE WITH YOUR ACTUAL API KEY
-API_KEY = "AIzaSyAPvG-YTe-bWw-72gXZCe0NW06QFjKC8Ns"
-genai.configure(api_key=API_KEY)
+# Instead of genai.configure(api_key="..."), use:
+genai.configure(api_key=st.secrets["GEMINI_KEY"])
 
 # We use gemini-3-flash-preview as found in your list_models() check
 model = genai.GenerativeModel('gemini-3-flash-preview')
