@@ -103,7 +103,7 @@ if uploaded_file is not None:
                     # 7. PERSISTENCE (Save to CSV)
                     save_to_history(data)
                     st.info("Meal saved to daily history!")
-                    st.button("Refresh Dashboard", on_click=st.rerun())
+                    st.button("Refresh Dashboard", on_click=st.rerun)
 
                 else:
                     st.error("Could not find data in AI response. Try a clearer photo.")
